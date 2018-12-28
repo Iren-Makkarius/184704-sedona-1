@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container-inner">
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="foto-and-video.html">Фото и видео</a></li>
+            <li><a href="logo.html">Лого</a></li>
+            <li><a href="map.html">Карта штата</a></li>
+            <li class="site-navigation-current">Гостиницы</li>
+          </ul>
+        </nav>
+        <a class="main-header-logo" href="index.html">
+          <img src="img/nav-logo.png" width="140" height="72" alt="Седона">
+        </a>
+      </div>
+    </header>
+
+    <main class="container-inner">
+      <section class="inner-filter">
+        <h1 class="visually-hidden">Фильтр товаров</h1>
+        <!--  форма -->
+        <form class="inner-filter" method="get" action="/sedona">
+          <fieldset class="inner-filter-infrastructure">
+            <legend>
+              Инфраструктура:
+            </legend>
+           <ul>
+             <li class="inner-filter-option">
+               <input id="inner-filter-option-pool" class="inner-filter-option-checkbox" type="checkbox" name="pool" checked>
+               <label for="inner-filter-option-pool">Бассейн</label>
+             </li>
+             <li class="inner-filter-option">
+              <input id="inner-filter-option-parking" class="inner-filter-option-checkbox" type="checkbox" name="parking">
+              <label for="inner-filter-option-parking">Парковка</label>
+             </li>
+             <li class="inner-filter-option">
+               <input id="inner-filter-option-wifi" class="inner-filter-option-checkbox" type="checkbox" name="wifi">
+               <label for="inner-filter-option-wifi">Wi-Fi</label>
+             </li>
+           </ul>
+          </fieldset>
+          <fieldset class="inner-filter-type">
+            <legend>
+              Тип жилья:
+            </legend>
+            <ul>
+              <li class="inner-filter-option">
+                <input id="inner-filter-option-hotel" class="inner-filter-option-checkbox" type="checkbox" name="hotel" checked>
+                <label for="inner-filter-option-hotel">Гостиница</label>
+              </li>
+              <li class="inner-filter-option">
+                <input id="inner-filter-option-motel" class="inner-filter-option-checkbox" type="checkbox" name="motel" checked>
+                <label for="inner-filter-option-motel">Мотель</label>
+              </li>
+              <li class="inner-filter-option">
+                <input id="inner-filter-option-apartments" class="inner-filter-option-checkbox" type="checkbox" name="apartments" checked>
+                <label for="inner-filter-option-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="inner-filter-price">
+            <label for="inner-filter-price-day">Стоимость в сутки (Р):</label>
+            <span>От 0</span>
+            <span>До 3000</span> <br>
+            <input id="inner-filter-price-day" type="range" name="price" min="0" max="3000" step="100">
+            <button class="button" type="submit">Показать</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="inner-filter-search">
+        <b>Найдено:3</b>
+        <div>Сортировка:</div>
+        <ul class="inner-filter-search-list">
+          <li class="inner-filter-search-item">
+            <a href="price.html">По цене</a>
+          </li>
+          <li class="inner-filter-search-item">
+            <a href="type.html">По типу</a>
+          </li>
+          <li class="inner-filter-search-item">
+            <a href="rating.html">По рейтингу</a>
+          </li>
+        </ul>
+        <div><!--треугольники выбора --></div>
+      </div>
+
+      <section class="inner-hotels">
+        <ul class="inner-hotels-list">
+
+          <li class="inner-hotels-list-item">
+            <div class="inner-hotels-left">
+              <img src="img/inner-hotel-1.jpg" width="135" height="90" alt="Отель Amara resort & spa">
+            </div>
+            <div class="inner-hotels-centre">
+              <h2 class="inner-hotels-title">Amara resort & spa</h2>
+              <p class="inner-hotels-view">
+                Гостиница
+              </p>
+              <p class="inner-hotels-price">
+                от 4000р.
+              </p>
+              <a class="button detail" href="#">Подробнее</a>
+              <a class="button booking" href="#">Забронировать</a>
+            </div>
+            <div class="inner-hotels-right">
+              <span class="inner-hotels-stars"></span>
+              <span class="rating">Рейтинг 8,5</span>
+            </div>
+          </li>
+
+          <li class="inner-hotels-list-item">
+            <div class="inner-hotels-left">
+              <img src="img/inner-hotel-2.jpg" width="135" height="90" alt="Отель Desert quail inn">
+            </div>
+            <div class="inner-hotels-centre">
+              <h2 class="inner-hotels-title">Desert quail inn</h2>
+              <p class="inner-hotels-view">
+                Мотель
+              </p>
+              <p class="inner-hotels-price">
+                от 3000р.
+              </p>
+              <a class="button detail" href="#">Подробнее</a>
+              <a class="button booking" href="#">Забронировать</a>
+            </div>
+            <div class="inner-hotels-right">
+              <span class="inner-hotels-stars"></span>
+              <span class="rating">Рейтинг 8,9</span>
+            </div>
+          </li>
+
+          <li class="inner-hotels-list-item">
+            <div class="inner-hotels-left">
+              <img src="img/inner-hotel-3.jpg" width="135" height="90" alt="Отель Villas at poco diablo">
+            </div>
+            <div class="inner-hotels-centre">
+              <h2 class="inner-hotels-title">Villas at poco diablo</h2>
+              <p class="inner-hotels-view">
+                Апартаменты
+              </p>
+              <p class="inner-hotels-price">
+                от 2000р.
+              </p>
+              <a class="button detail" href="#">Подробнее</a>
+              <a class="button booking" href="#">Забронировать</a>
+            </div>
+            <div class="inner-hotels-right">
+              <span class="inner-hotels-stars"></span>
+              <span class="rating">Рейтинг 9,2</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="container-inner">
+        <div class="footer-hashtag">
+          <span>#visitsedona</span>
+        </div>
+        <div class="footer-social">
+          <ul>
+            <li>
+              <a class="footer-social-button" href="#" aria-label="В контакте">Вконтакте</a>
+            </li>
+            <li>
+              <a class="footer-social-button" href="#" aria-label="Фейсбук">Фейсбук</a>
+            </li>
+            <li>
+              <a class="footer-social-button" href="#" aria-label="Ютуб">Ютуб</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-logo">
+          <span>websiteby</span>
+          <!-- здесь будет svg вместо img-->
+          <a class="button" href="https://htmlacademy.ru"><svg src="https://htmlacademy.ru/intensive/htmlcss" width="115" height="41" alt="Логотип HTML ACADEMY"></svg></a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
